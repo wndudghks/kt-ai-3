@@ -1,0 +1,17 @@
+def solution(left, right):
+    answer = 0
+    for num in range(left, right+1):
+        count=0
+        for i in range(2,num):
+            if num%i==0:
+                count+=1
+        if count%2==0:
+            answer+=num
+        else:
+            answer-=num
+    return answer
+
+left = int(input('left: '))
+right = int(input('right: '))
+c = solution(left, right)
+print(c)
